@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+<title>Diamond Sofőrszolgálat — Biztonságos hazajutás saját autójával</title>
+<meta name="description" content="Diamond Sofőrszolgálat — Budapest, 0-24 órában. Hívjon most: 0670 574 64 14">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0d16;--bg2:#10162a;--line:rgba(139,199,245,.28);--accent:#8ecdf5;--accent2:#a9dcf7;--gold:#f2c66d;--text:#eef1f8;--dim:#8891a3;--serif:'EB Garamond',Georgia,serif;--sans:'Inter',-apple-system,'Segoe UI',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.55;padding-bottom:62px;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+section{padding:54px 0}
+.tag{color:var(--accent);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px;font-weight:600}
+h2{font-family:var(--serif);font-weight:400;font-size:2rem;line-height:1.2;margin-bottom:12px}
+h2 em,h1 em{color:var(--accent);font-style:italic}
+.sub{color:var(--dim);max-width:520px;margin-bottom:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:600;font-size:.98rem}
+.btn-p{background:var(--accent2);color:#0a0d16}
+.btn-g{border:1px solid var(--line)}
+header{position:sticky;top:0;z-index:20;background:rgba(10,13,22,.88);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{font-family:var(--serif);font-size:1.2rem}.brand b{color:var(--accent);font-weight:400}
+nav{display:none;gap:26px;font-size:.92rem;color:var(--dim)}
+nav a:hover{color:var(--text)}
+.pill{border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-weight:600;font-size:.9rem}
+@media(min-width:800px){nav{display:flex}}
+
+.hero{position:relative;padding:56px 0 40px;text-align:center;overflow:hidden}
+.badge{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:999px;padding:7px 16px;font-size:.82rem;color:var(--accent);margin-bottom:26px}
+.badge i{width:7px;height:7px;border-radius:50%;background:#5be28f;box-shadow:0 0 0 4px rgba(91,226,143,.18)}
+h1{font-family:var(--serif);font-weight:400;font-size:3.1rem;line-height:1.05;margin-bottom:20px}
+.lede{color:var(--dim);max-width:520px;margin:0 auto 28px;font-size:1.05rem}
+.lede b{color:var(--text)}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.float{position:absolute;width:56px;height:56px;border:1px solid var(--line);border-radius:18px;background:var(--bg2);display:grid;place-items:center;font-size:1.5rem;animation:fl 6s ease-in-out infinite}
+.f1{left:5%;top:70px}.f2{right:6%;top:110px;animation-delay:1s}.f3{left:9%;bottom:60px;animation-delay:2s}.f4{right:10%;bottom:80px;animation-delay:3s}
+@keyframes fl{50%{transform:translateY(-12px) rotate(4deg)}}
+@media(max-width:700px){.float{width:42px;height:42px;font-size:1.1rem;border-radius:13px;opacity:.7}.f3,.f4{display:none}}
+@media(min-width:900px){h1{font-size:5.4rem}}
+@media(prefers-reduced-motion:reduce){.float,.marq div{animation:none}}
+
+.stats{display:flex;border-block:1px solid rgba(255,255,255,.08)}
+.stat{flex:1;text-align:center;padding:24px 6px}
+.stat+.stat{border-left:1px solid rgba(255,255,255,.08)}
+.stat b{display:block;font-family:var(--serif);font-style:italic;font-weight:400;font-size:1.6rem;color:var(--accent2)}
+.stat span{color:var(--dim);font-size:.82rem}
+.marq{overflow:hidden;border-bottom:1px solid rgba(255,255,255,.08);padding:16px 0;color:var(--dim);font-family:var(--serif);font-size:1.15rem;white-space:nowrap}
+.marq div{display:inline-block;animation:mq 30s linear infinite}
+.marq span{margin:0 22px}.marq span::after{content:"◆";margin-left:44px;color:var(--accent);font-size:.6rem}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+.grid{display:grid;gap:14px}
+@media(min-width:620px){.g2{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}}
+.card{border:1px solid var(--line);border-radius:18px;padding:24px;background:linear-gradient(160deg,rgba(142,205,245,.05),transparent)}
+.card .ic{font-size:1.5rem;margin-bottom:12px}
+.card h3{font-family:var(--serif);font-weight:400;font-size:1.25rem;margin-bottom:6px}
+.card p{color:var(--dim);font-size:.92rem}
+
+.big{display:grid;gap:14px}
+.big .card{padding:32px}
+.big b{display:block;font-family:var(--serif);font-weight:400;font-size:3.4rem;color:var(--accent2);line-height:1}
+.big h3{margin:12px 0 6px}
+
+.steps{counter-reset:s;display:grid;gap:14px}
+@media(min-width:800px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{border-top:1px solid var(--line);padding-top:18px}
+.step::before{counter-increment:s;content:counter(s) ".";font-family:var(--serif);font-size:2.6rem;color:var(--accent)}
+.step h3{font-family:var(--serif);font-weight:400;font-size:1.2rem;margin:4px 0 6px}
+.step p{color:var(--dim);font-size:.92rem}
+
+.price{text-align:center;padding:34px 18px}
+.price b{display:block;font-family:var(--serif);font-weight:400;font-size:2.6rem;font-variant-numeric:oldstyle-nums}
+.price span{color:var(--dim);font-size:.9rem}
+.note{color:var(--dim);font-size:.85rem;margin-top:14px}
+.ex{margin-top:14px;border:1px dashed var(--line);border-radius:14px;padding:16px 20px;font-size:.92rem;color:var(--dim)}
+.ex b{color:var(--text)}
+
+.city{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:linear-gradient(180deg,#141b38,#0a0d16 85%);margin-bottom:14px}
+.city svg{display:block;width:100%;height:auto}
+.spots{display:grid;gap:14px}
+@media(min-width:700px){.spots{grid-template-columns:repeat(3,1fr)}}
+
+.warn{border:1px solid rgba(242,198,109,.4);background:rgba(242,198,109,.06);border-radius:20px;padding:28px 24px}
+.warn h2{color:var(--gold)}
+.warn ul{list-style:none;display:grid;gap:12px;margin-top:16px}
+.warn li{padding-left:28px;position:relative;color:#d9dce6;font-size:.95rem}
+.warn li::before{content:"⚠";position:absolute;left:0;color:var(--gold)}
+
+details{border-bottom:1px solid rgba(255,255,255,.1);padding:18px 0}
+summary{cursor:pointer;font-family:var(--serif);font-size:1.2rem;list-style:none;display:flex;justify-content:space-between;gap:14px}
+summary::after{content:"+";color:var(--accent);font-size:1.5rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--dim);margin-top:10px;font-size:.95rem;max-width:640px}
+
+.final{position:relative;text-align:center;border:1px solid var(--line);border-radius:26px;padding:56px 22px;overflow:hidden;background:radial-gradient(circle at 50% 120%,rgba(142,205,245,.22),transparent 60%)}
+.final h2{font-size:2.3rem;max-width:620px;margin:0 auto 14px}
+.final .ph{display:block;font-family:var(--serif);font-size:2.4rem;margin:18px 0 24px;color:var(--accent2)}
+@media(min-width:900px){.final h2{font-size:3rem}.final .ph{font-size:3.4rem}}
+
+footer{text-align:center;color:var(--dim);font-size:.82rem;padding:34px 0 30px}
+footer nav{display:flex;justify-content:center;margin-bottom:12px}
+.sticky{position:fixed;left:0;right:0;bottom:0;background:var(--accent2);color:#0a0d16;text-align:center;font-weight:700;padding:16px 16px calc(16px + env(safe-area-inset-bottom,0px));z-index:30}
+@media(min-width:900px){.sticky{display:none}body{padding-bottom:0}h2{font-size:2.6rem}}
+</style>
+</head>
+<body>
+
+<header><div class="wrap">
+  <a class="brand" href="#"><b>Diamond</b> Sofőrszolgálat</a>
+  <nav><a href="#arak">Árak</a><a href="#budapest">Budapest</a><a href="#fontos">Tudnivalók</a><a href="#gyik">GYIK</a></nav>
+  <a class="pill" href="tel:+36705746414">📞 0670 574 64 14</a>
+</div></header>
+
+<main>
+<div class="hero"><div class="wrap">
+  <span class="float f1">🚗</span><span class="float f2">🌙</span><span class="float f3">🛡️</span><span class="float f4">📍</span>
+  <div class="badge"><i></i> Budapest · mind a 23 kerület · 0–24 órában</div>
+  <h1>Biztonságos hazajutás<br><em>saját autójával</em></h1>
+  <p class="lede">Ne vezessen alkoholfogyasztás után. Hívjon minket, és <b>biztonságosan hazavisszük Önt és az autóját is.</b></p>
+  <div class="cta"><a class="btn btn-p" href="tel:+36705746414">📞 Hívás most</a><a class="btn btn-g" href="#arak">Árak megtekintése</a></div>
+</div></div>
+
+<div class="wrap"><div class="stats">
+  <div class="stat"><b>0–24</b><span>Éjjel-nappal</span></div>
+  <div class="stat"><b>Saját</b><span>autójával</span></div>
+</div></div>
+
+<div class="marq"><div>
+  <span>I. kerület</span><span>II. kerület</span><span>III. kerület</span><span>IV. kerület</span><span>V. kerület</span><span>VI. kerület</span><span>VII. kerület</span><span>VIII. kerület</span><span>IX. kerület</span><span>X. kerület</span><span>XI. kerület</span><span>XII. kerület</span><span>XIII. kerület</span><span>XIV. kerület</span><span>XV. kerület</span><span>XVI. kerület</span><span>XVII. kerület</span><span>XVIII. kerület</span><span>XIX. kerület</span><span>XX. kerület</span><span>XXI. kerület</span><span>XXII. kerület</span><span>XXIII. kerület</span>
+  <span>I. kerület</span><span>II. kerület</span><span>III. kerület</span><span>IV. kerület</span><span>V. kerület</span><span>VI. kerület</span><span>VII. kerület</span><span>VIII. kerület</span><span>IX. kerület</span><span>X. kerület</span><span>XI. kerület</span><span>XII. kerület</span><span>XIII. kerület</span><span>XIV. kerület</span><span>XV. kerület</span><span>XVI. kerület</span><span>XVII. kerület</span><span>XVIII. kerület</span><span>XIX. kerület</span><span>XX. kerület</span><span>XXI. kerület</span><span>XXII. kerület</span><span>XXIII. kerület</span>
+</div></div>
+
+<section id="arak"><div class="wrap">
+  <div class="tag">Árak</div>
+  <h2>Egyszerű, átlátható <em>díjszabás</em></h2>
+  <p class="sub">Meglepetések nélkül.</p>
+  <div class="grid g2" style="max-width:560px">
+    <div class="card price"><b>500 Ft</b><span>Fuvardíj / km</span></div>
+    <div class="card price"><b>5&nbsp;000 Ft</b><span>Kiszállási díj</span></div>
+  </div>
+  <p class="note">Az árak az ÁFA-t nem tartalmazzák.</p>
+  <div class="ex" style="max-width:560px"><b>Példa (tájékoztató):</b> 10 km-es út = 5&nbsp;000 Ft kiszállási díj + 10 × 500 Ft = <b>10&nbsp;000 Ft + ÁFA</b></div>
+</div></section>
+
+<section id="budapest"><div class="wrap">
+  <div class="tag">Budapest éjjel</div>
+  <h2>Menjen szórakozni, <em>a hazautat intézzük</em></h2>
+  <p class="sub">Budapesten rengeteg a lehetőség. Bárhol is tölti az estét, mi hazavisszük.</p>
+  <div class="city">
+    <svg viewBox="0 0 800 260" role="img" aria-label="Budapest éjszakai látképe">
+      <defs><linearGradient id="r" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8ecdf5" stop-opacity=".35"/><stop offset="1" stop-color="#8ecdf5" stop-opacity="0"/></linearGradient></defs>
+      <circle cx="660" cy="55" r="26" fill="#f2f0e0" opacity=".9"/>
+      <g fill="#fff" opacity=".7"><circle cx="90" cy="40" r="1.5"/><circle cx="200" cy="70" r="1.5"/><circle cx="330" cy="30" r="1.5"/><circle cx="470" cy="60" r="1.5"/><circle cx="560" cy="25" r="1.5"/><circle cx="740" cy="100" r="1.5"/></g>
+      <g fill="#0a0d16" stroke="#8ecdf5" stroke-opacity=".5">
+        <path d="M0 200 L0 150 L40 150 L40 130 L70 130 L70 160 L110 160 L110 120 L140 120 L140 200Z"/>
+        <path d="M180 200 L180 140 L200 140 L200 80 L206 60 L212 80 L212 140 L240 140 L240 100 L260 100 L260 200Z"/>
+        <path d="M300 200 L300 150 L330 150 L330 120 L360 90 L390 120 L390 150 L420 150 L420 130 L450 130 L450 200Z"/>
+        <path d="M330 120 Q360 60 390 120"/><path d="M340 125 L340 90 M380 125 L380 90 M360 95 L360 55"/>
+        <path d="M500 200 L500 160 L530 160 L530 125 L550 125 L550 160 L590 160 L590 140 L620 140 L620 200Z"/>
+        <path d="M650 200 L650 110 L662 80 L674 110 L674 200Z"/>
+        <path d="M700 200 L700 150 L730 150 L730 130 L800 130 L800 200Z"/>
+      </g>
+      <rect y="200" width="800" height="60" fill="url(#r)"/>
+      <g stroke="#f2c66d" stroke-width="2" opacity=".85"><path d="M140 205 H500"/><path d="M160 205 V185 M230 205 V185 M300 205 V185 M370 205 V185 M440 205 V185"/></g>
+      <g fill="#f2c66d" opacity=".9"><circle cx="160" cy="184" r="3"/><circle cx="230" cy="184" r="3"/><circle cx="300" cy="184" r="3"/><circle cx="370" cy="184" r="3"/><circle cx="440" cy="184" r="3"/></g>
+      <g transform="translate(540 214)"><rect width="74" height="20" rx="8" fill="#a9dcf7"/><path d="M12 0 L22 -12 H52 L64 0Z" fill="#8ecdf5"/><circle cx="18" cy="21" r="6" fill="#0a0d16" stroke="#a9dcf7" stroke-width="2"/><circle cx="56" cy="21" r="6" fill="#0a0d16" stroke="#a9dcf7" stroke-width="2"/><circle cx="74" cy="10" r="3" fill="#f2c66d"/></g>
+    </svg>
+  </div>
+</div></section>
+
+<section id="fontos"><div class="wrap"><div class="warn">
+  <div class="tag" style="color:var(--gold)">Figyelmeztetés</div>
+  <h2>Fontos tudnivalók <em style="color:var(--gold)">vezetés előtt</em></h2>
+  <ul>
+    <li>Magyarországon alkoholos állapotban vezetni tilos, a megengedett alkoholszint 0,00 ‰.</li>
+    <li>A rendőri ellenőrzések során szondáztatás bármikor előfordulhat, és az ittas vezetés súlyos következményekkel jár (jogosítvány elvesztése, büntetőeljárás).</li>
+    <li>Az alkohol lebomlása lassú: másnap reggel is lehet alkohol a vérében, akkor is, ha jól érzi magát.</li>
+    <li>Döntse el előre: ha ivott, nem vezet, hanem hívja a sofőrszolgálatot.</li>
+  </ul>
+  <div style="margin-top:22px"><a class="btn btn-p" href="tel:+36705746414">📞 Inkább hívom a sofőrt</a></div>
+</div></div></section>
+
+<section id="gyik"><div class="wrap">
+  <div class="tag">GYIK</div>
+  <h2>Gyakori <em>kérdések</em></h2>
+  <div style="max-width:720px;margin-top:20px">
+    <details><summary>Hogyan rendelhetek sofőrt?</summary><p>Hívja a 0670 574 64 14 számot, mondja meg a címet, ahol van, és hova szeretne menni. A többit mi intézzük.</p></details>
+    <details><summary>Mennyi idő alatt érkeznek meg?</summary><p>A kiérkezési idő a távolságtól és a forgalomtól függ. Híváskor megmondjuk a becsült időt.</p></details>
+    <details><summary>Az én autómmal visznek haza?</summary><p>Igen. Sofőrünk az Ön autójával viszi haza, így nem kell másnap visszamennie érte.</p></details>
+    <details><summary>Mennyibe kerül?</summary><p>A fuvardíj 500 Ft/km, a kiszállási díj 5 000 Ft. Az árak az ÁFA-t nem tartalmazzák.</p></details>
+    <details><summary>Mely területeken dolgoznak?</summary><p>Budapesten belül, mind a 23 kerületben.</p></details>
+    <details><summary>Éjjel és hétvégén is elérhetők?</summary><p>Igen, 0–24 órában, ünnepnapokon is.</p></details>
+  </div>
+</div></section>
+
+<section id="kapcsolat"><div class="wrap"><div class="final">
+  <div class="tag">Kapcsolat</div>
+  <h2>Ne vezessen, ha nem biztos benne. <em>Hívjon minket.</em></h2>
+  <a class="ph" href="tel:+36705746414">0670 574 64 14</a>
+  <div class="cta"><a class="btn btn-p" href="tel:+36705746414">Hívás most</a><a class="btn btn-g" href="mailto:diamondsoforszolgalat@gmail.com">✉️ E-mail írása</a></div>
+  <p class="note" style="margin-top:18px"><a href="mailto:diamondsoforszolgalat@gmail.com">diamondsoforszolgalat@gmail.com</a><br>Budapest · 0–24 órában elérhető</p>
+</div></div></section>
+</main>
+
+<footer><div class="wrap">
+  <nav><a href="#arak">Árak</a><span style="margin:0 12px">·</span><a href="#kapcsolat">Kapcsolat</a></nav>
+  <p style="margin-bottom:8px"><a href="mailto:diamondsoforszolgalat@gmail.com">diamondsoforszolgalat@gmail.com</a></p>
+  © 2026 Diamond Sofőrszolgálat — Minden jog fenntartva.
+</div></footer>
+
+<a class="sticky" href="tel:+36705746414">Hívás most — 0670 574 64 14</a>
+</body>
+</html>
