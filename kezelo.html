@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hu"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Pozíció kezelő</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0a0d16;color:#eef1f8;font-family:-apple-system,Segoe UI,sans-serif;padding:20px;padding-bottom:40px}
+h1{font-size:1.3rem;margin:0 0 6px}p{color:#8891a3;margin:0 0 16px}
+#cur{font-size:1.1rem;color:#5be28f;font-weight:700;margin-bottom:18px;min-height:1.6em}
+input{width:100%;padding:14px;border-radius:12px;border:1px solid #2c3a5a;background:#10162a;color:#fff;font-size:1rem;margin-bottom:16px}
+.g{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+button{padding:18px 6px;border-radius:14px;border:1px solid rgba(139,199,245,.35);background:#10162a;color:#eef1f8;font-size:1.05rem;font-weight:600}
+button:active{background:#a9dcf7;color:#0a0d16}button.on{background:#5be28f;color:#0a0d16;border-color:#5be28f}
+.off{grid-column:1/-1;border-color:#ff6b6b;color:#ff9b9b}
+#msg{margin-top:14px;color:#f2c66d;min-height:1.4em}
+</style></head><body>
+<h1>Pozíció kezelő</h1><p>Koppints a kerületre, és az oldalon azonnal frissül.</p>
+<div id="cur">Betöltés…</div>
+<input id="pin" type="password" inputmode="numeric" placeholder="PIN kód" autocomplete="off">
+<div class="g" id="g"></div>
+<div id="msg"></div>
+<script>
+var K=["I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII","XIII","XIV","XV","XVI","XVII","XVIII","XIX","XX","XXI","XXII","XXIII"];
+var pin=document.getElementById('pin'),g=document.getElementById('g'),cur=document.getElementById('cur'),msg=document.getElementById('msg'),now='';
+try{pin.value=localStorage.getItem('pin')||''}catch(e){}
+function draw(){
+  g.innerHTML='';
+  K.forEach(function(k){var b=document.createElement('button');b.textContent=k+'.';if(k===now)b.className='on';b.onclick=function(){set(k)};g.appendChild(b)});
+  var o=document.createElement('button');o.textContent='Nem jelenik meg (elrejt)';o.className='off';o.onclick=function(){set('')};g.appendChild(o);
+  cur.textContent=now?'Jelenleg: '+now+'. kerület':'Jelenleg: nem jelenik meg';
+}
+function get(){fetch('/api/pozicio',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){now=d.kerulet||'';draw()}).catch(function(){cur.textContent='Nem érhető el a szerver';draw()})}
+function set(k){
+  msg.textContent='Mentés…';
+  fetch('/api/pozicio',{method:'POST',headers:{'content-type':'application/json','x-pin':pin.value},body:JSON.stringify({kerulet:k})})
+  .then(function(r){return r.json().then(function(d){return{ok:r.ok,d:d}})})
+  .then(function(x){if(x.ok){now=k;try{localStorage.setItem('pin',pin.value)}catch(e){}msg.textContent='Kész ✔';draw()}else{msg.textContent=x.d.error||'Hiba'}})
+  .catch(function(){msg.textContent='Nem sikerült menteni'});
+}
+get();
+</script></body></html>
